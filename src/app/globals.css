@@ -38,7 +38,20 @@ hr {
   border-top: 1px solid rgba(var(--foreground-rgb), 0.1);
 }
 
+a {
+  color: gray;
+}
+
 a:hover {
   /* tailwind text-blue-600 */
   color: rgb(37 99 235);
+}
+
+em {
+  border-radius: 0.25rem;
+  background-color: rgba(24, 23, 12, 0.4);
+  padding: 0.1rem 0.25rem;
+  color: white;
+  font-style: normal;
+  font-family: monospace;
 }
