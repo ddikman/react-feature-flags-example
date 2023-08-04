@@ -26,17 +26,11 @@ export default function Page() {
 
   const labelClasses = 'text-bold text-slate-600';
   return <div>
-    <h2 className='text-2xl'>User Profile</h2>
+    <h2 className='text-2xl'>{user.name}</h2>
     <div className="my-4 text-sm"><Link href='/'>Top</Link> » Profile Page</div>
     <Card>
-      <h2 className='mb-2 flex justify-between items-end text-lg'>
-      { user.name }
-        <span className='text-sm'>{ user.handle }</span>
-      </h2>
-      <div>
-
-      </div>
-      <div className='flex flex-col gap-2'>
+      <h2 className='mb-2 text-lg'>{ user.handle }</h2>
+      <div className='columns-1 md:columns-2 lg:columns-3'>
         <ProfileData label='Email:' content={user.email} />
         <ProfileData label='Company:' content={user.company.name} />
         <ProfileData label='Website:' content={user.website} />
@@ -47,5 +41,5 @@ export default function Page() {
 }
 
 function ProfileData({label, content}) {
-  return <span><span className='text-sm block text-bold text-slate-400 pr-4'>{label}</span>{ content }</span>
+  return <div className="break-inside-avoid-column mb-2"><span className='text-sm block text-bold text-slate-400 pr-4'>{label}</span>{ content }</div>
 }
