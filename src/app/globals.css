@@ -37,3 +37,8 @@ hr {
   border: 0;
   border-top: 1px solid rgba(var(--foreground-rgb), 0.1);
 }
+
+a:hover {
+  /* tailwind text-blue-600 */
+  color: rgb(37 99 235);
+}

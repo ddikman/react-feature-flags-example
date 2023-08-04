@@ -29,7 +29,7 @@ export default function Page() {
     <div className="mb-4"><Link href='/'>‹ Back</Link></div>
     <Card>
       <h2 className='mb-2 flex justify-between items-end text-lg'>
-        { user.name }
+      { user.name }
         <span className='text-sm'>{ user.handle }</span>
       </h2>
       <div>
