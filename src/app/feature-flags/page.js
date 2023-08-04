@@ -3,27 +3,7 @@
 import { useEffect, useState } from "react";
 import ToggleButton from "./toggle-button";
 import Link from "next/link";
-
-function getFeatureFlags() {
-  const flags = [
-    { label: 'Show profile page link', id: 'profilePage', defaultValue: false },
-    { label: 'Example feature flag 2', id: 'ff2', defaultValue: false },
-    { label: 'Example feature flag 3', id: 'ff3', defaultValue: false },
-    { label: 'Example feature flag 4', id: 'ff4', defaultValue: true }
-  ]
-
-  for (const flag of flags) {
-    // load values from local storage
-    const savedValue = localStorage.getItem(`feature-flag-${flag.id}`)
-    if (!savedValue) {
-      flag.value = flag.defaultValue;
-    } else {
-      flag.value = savedValue === 'true';
-    }
-  }
-
-  return flags;
-}
+import getFeatureFlags from "./get-feature-flags";
 
 export default function Page() {
   const [ featureFlags, setFeatureFlags ] = useState(getFeatureFlags());
