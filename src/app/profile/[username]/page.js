@@ -27,7 +27,7 @@ export default function Page() {
   const labelClasses = 'text-bold text-slate-600';
   return <div>
     <h2 className='text-2xl'>User Profile</h2>
-    <div className="my-4"><Link href='/'>‹ Back</Link></div>
+    <div className="my-4 text-sm"><Link href='/'>Top</Link> » Profile Page</div>
     <Card>
       <h2 className='mb-2 flex justify-between items-end text-lg'>
       { user.name }

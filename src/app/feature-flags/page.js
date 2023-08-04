@@ -20,9 +20,7 @@ export default function Page() {
   // Use the helper component to display each flag and listen for updates
   return <div>
     <h2 className="text-2xl">Feature Flags</h2>
-    <div className="mt-2">
-      <Link href="/">Back to top</Link>
-    </div>
+    <div className="my-4 text-sm"><Link href='/'>Top</Link> » Feature Flags</div>
     <hr className="my-2" />
     <div className="flex flex-wrap gap-4 mt-4">
       { featureFlags.map((flag) => {
