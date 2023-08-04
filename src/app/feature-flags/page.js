@@ -28,6 +28,7 @@ function getFeatureFlags() {
 export default function Page() {
   const [ featureFlags, setFeatureFlags ] = useState(getFeatureFlags());
 
+  // Once the component is mounted, load the feature flags from local storage
   useEffect(() => {
     setFeatureFlags(getFeatureFlags());
   }, [])
@@ -44,7 +45,13 @@ export default function Page() {
     </div>
     <hr className="my-2" />
     <div className="flex flex-wrap gap-4 mt-4">
-      { featureFlags.map((flag) => (<ToggleButton initialValue={flag.value} label={flag.label} key={flag.id} onChange={(value) => setFeatureFlag(value, flag.id) } />)) }
+      { featureFlags.map((flag) => {
+        return <ToggleButton
+          key={flag.id}
+          initialValue={flag.value}
+          label={flag.label}
+          onChange={(value) => setFeatureFlag(value, flag.id) } />
+      }) }
     </div>
   </div>
 }
