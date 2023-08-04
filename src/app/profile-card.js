@@ -1,9 +1,10 @@
 import Card from '@/app/card';
+import ProfileLink from '@/app/profile-link';
 
 export default function ProfileCard({ user }) {
 
-  const userhandle = '@' + user.username.toLowerCase();
-  const username = <span>{userhandle}</span>;
+  const featureEnabled = true
+  const username = featureEnabled ? <ProfileLink username={user.username} label={user.handle} /> : <span>{user.handle}</span>;
 
   return <Card>
     <h2>{user.name}</h2>
