@@ -3,8 +3,10 @@ import ProfileLink from '@/app/profile-link';
 
 export default function ProfileCard({ user }) {
 
-  const featureEnabled = true
-  const username = featureEnabled ? <ProfileLink username={user.username} label={user.handle} /> : <span>{user.handle}</span>;
+  const featureEnabled = true;
+  const username = featureEnabled
+    ? <ProfileLink username={user.username} label={user.handle} />
+    : <span>{user.handle}</span>;
 
   return <Card>
     <h2>{user.name}</h2>
