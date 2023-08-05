@@ -4,6 +4,7 @@ import getFeatureFlagValue from '@/app/feature-flags/get-feature-flag-value';
 
 export default function ProfileCard({ user }) {
 
+  // const featureEnabled = false;
   const featureEnabled = getFeatureFlagValue('profile-link');
   const username = featureEnabled
     ? <ProfileLink username={user.username} label={user.handle} />
