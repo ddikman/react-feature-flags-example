@@ -32,7 +32,7 @@ export default function Home() {
 
     <hr className='mb-4' />
     { users.length === 0 && <Spinner /> }
-    { users.length > 0 && <div class="profile-list columns-1 sm:columns-2 lg:columns-3 2xl:columns-4">
+    { users.length > 0 && <div className="profile-list columns-1 sm:columns-2 lg:columns-3 2xl:columns-4">
       { users.map((user, index) => (<div key={index} className='mb-4'><ProfileCard user={user} /></div>)) }
     </div> }
     </>
