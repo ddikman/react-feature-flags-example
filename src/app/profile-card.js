@@ -1,9 +1,8 @@
 import Card from '@/app/card';
 import ProfileLink from '@/app/profile-link';
-import getFeatureFlagValue from '@/app/feature-flags/get-feature-flag-value';
 
+// import getFeatureFlagValue from '@/app/feature-flags/get-feature-flag-value';
 import { useFlag } from '@unleash/proxy-client-react';
-
 
 export default function ProfileCard({ user }) {
 
