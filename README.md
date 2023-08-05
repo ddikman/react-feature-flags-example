@@ -4,6 +4,14 @@ This is a simple example repository to show how Feature Flags can be used in Rea
 
 ![Screenshot from the app top page](./screenshot.png)
 
+This project is built with [Next.js](https://nextjs.org/)
+
+## Example App
+
+You can view this app without running locally by accessing the deploy version on Vercel:
+
+https://react-feature-flags-example.vercel.app/
+
 ## Getting Started
 
 Running the app:

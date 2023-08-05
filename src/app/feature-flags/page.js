@@ -6,7 +6,7 @@ import Link from "next/link";
 import getFeatureFlags from "./get-feature-flags";
 
 export default function Page() {
-  const [ featureFlags, setFeatureFlags ] = useState(getFeatureFlags());
+  const [ featureFlags, setFeatureFlags ] = useState([]);
 
   // Once the component is mounted, load the feature flags from local storage
   useEffect(() => {
