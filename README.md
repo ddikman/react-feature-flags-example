@@ -6,7 +6,7 @@ This is a simple example repository to show how Feature Flags can be used in Rea
 
 This project is built with [Next.js](https://nextjs.org/)
 
-## Example App
+## Example App
 
 You can view this app without running locally by accessing the deploy version on Vercel:
 
